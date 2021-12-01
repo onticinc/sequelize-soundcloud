@@ -1,8 +1,8 @@
 const { application } = require('express');
-const { Userinfo } = require('./models');
+const { UserInfo } = require('./models');
 
 // ********* CREATE PLAYER
-Userinfo.create({
+UserInfo.create({
     userName: 'audiostar',
     firstName: 'mike',
     lastName: 'smith',

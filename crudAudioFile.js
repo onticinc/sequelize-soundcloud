@@ -1,5 +1,5 @@
 const { application } = require('express');
-const { audiofile } = require('./models');
+const { AudioFile } = require('./models');
 
 // ********* CREATE PLAYER
 AudioFile.create({
