@@ -2,19 +2,15 @@ const { application } = require('express');
 const { audiofile } = require('./models');
 
 // ********* CREATE PLAYER
-Player.create({
-    name: 'Keljin Blevins',
-    number: 21,
-    position: 'Guard',
-    college: 'Montana State',
-    salary: 7_700_000,
-    height: 63,
-    weight: 200,
-    team: 'La Clippers'
+AudioFile.create({
+    fileName: 'New Song Title',
+    fileDescription: 'New File Description',
+    public: 0,
+    tags: 'dope'
 })
-    .then(function (newPlayer) {
-        console.log(newPlayer.toJSON());
+    .then((newFile) => {
+        console.log(newFile.toJSON());
     })
-    .catch(function (error) {
+    .catch((error) => {
         console.log('Error creating player', error)
     })

@@ -1,11 +1,11 @@
 {
   "development": {
-    "database": "userapp_development",
+    "database": "seq_soundcloud",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "test": {
-    "database": "userapp_test",
+    "database": "seq_soundcloud_test",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },

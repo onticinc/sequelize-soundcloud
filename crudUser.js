@@ -1,20 +1,16 @@
 const { application } = require('express');
-const { userinfo } = require('./models');
+const { Userinfo } = require('./models');
 
 // ********* CREATE PLAYER
-.create({
-    name: 'Keljin Blevins',
-    number: 21,
-    position: 'Guard',
-    college: 'Montana State',
-    salary: 7_700_000,
-    height: 63,
-    weight: 200,
-    team: 'La Clippers'
+Userinfo.create({
+    userName: 'audiostar',
+    firstName: 'mike',
+    lastName: 'smith',
+    email: 'audiostarinc@gmail.com',
 })
-    .then(function (newPlayer) {
-        console.log(newPlayer.toJSON());
+    .then((newUser) => {
+        console.log(newUser.toJSON());
     })
-    .catch(function (error) {
-        console.log('Error creating player', error)
+    .catch((error) => {
+        console.log('Error creating users', error)
     })
