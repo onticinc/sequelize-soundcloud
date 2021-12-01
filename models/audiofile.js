@@ -3,7 +3,7 @@ const {
   Model
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
-  class audioFile extends Model {
+  class AudioFile extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
@@ -13,14 +13,14 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
     }
   };
-  audioFile.init({
+  AudioFile.init({
     fileName: DataTypes.STRING,
     fileDescription: DataTypes.STRING,
     public: DataTypes.INTEGER,
     tags: DataTypes.STRING
   }, {
     sequelize,
-    modelName: 'audioFile',
+    modelName: 'AudioFile',
   });
-  return audioFile;
+  return AudioFile;
 };
